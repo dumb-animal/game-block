@@ -27,23 +27,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //==================SHOW ADS=======================
 
-  const leftAds = document.querySelector('cf-left-game-cont')
-  const rightAds = document.querySelector('cf-right-game-cont')
-  const bottomAds = document.querySelector('.footer_ads > cf-ads-block')
-  const game = document.querySelector('cf-game-cont')
+  const leftAds = document.querySelector('.ads__left_container')
+  const rightAds = document.querySelector('.ads__right_container')
+  const bottomAds = document.querySelector('.footer_ads')
+  const game = document.querySelector('.game__content')
 
   const chackSize = () => {
     leftAds.style.display = 'inline-block'
     rightAds.style.display = 'inline-block'
-    bottomAds.style.width = '750px'
 
-    let size = leftAds.offsetWidth + rightAds.offsetWidth + game.offsetWidth
-    if (size > window.innerWidth) leftAds.style.display = 'none'
-    size = rightAds.offsetWidth + game.offsetWidth
-    if (size > window.innerWidth) {
-      rightAds.style.display = 'none'
-      bottomAds.style.width = '100%'
-    }
+    let size = leftAds.clientWidth + rightAds.clientWidth + game.clientWidth + 7
+    if (size >= document.body.clientWidth) leftAds.style.display = 'none'
+
+    size = rightAds.offsetWidth + game.offsetWidth + 7
+    if (size >= document.body.clientWidth) rightAds.style.display = 'none'
+
+    // if (document.body.clientWidth > 720) bottomAds.style.width = document.body.clientWidth
   }
 
   chackSize()

@@ -3,6 +3,9 @@
 @import "./footer"
 // @import "./fonts"
 
+// body
+//     overflow-x: auto
+
 main
     padding: 50px 0
     min-height: (calc( 100% - 250px ))
@@ -14,6 +17,7 @@ main
     margin: 0 auto
 
 .overlay
+    user-select: none
     position: absolute
     width: 100%
     height: 100%
@@ -28,6 +32,7 @@ main
     padding-bottom: 14px
     &__links
     &__link
+        user-select: none
         font-weight: 400
         font-size: 30px
         padding: 6px 40px
@@ -62,10 +67,16 @@ main
             font-size: 48px
             margin-left: 20px
     &__block
+        overflow-x: auto
         padding-top: 20px
         background-color: #b0b0b0
-        margin-bottom: 20px
+        text-align: center
     &__content
+        position: relative
+        display: inline-block
+        vertical-align: middle
+        iframe
+            display: block
     &__description
         &_header
         &_content
@@ -89,56 +100,39 @@ main
                 height: 330px
                 margin-bottom: 30px
 
+.ads
+    display: block
+    width: 260px
+    height: 400px
+    background: linear-gradient(90deg, rgba(17,173,148,1) 0%, rgba(4,230,193,1) 100%)
+    &__side
+        display: block
+        width: 460px
+        padding: 0 100px
+    &__left
+        &_container
+            vertical-align: middle
+    &__right
+        &_container
+            vertical-align: middle
+    &__bottom
+        width: 720px
+        // width: 100%
+        height: 240px
+        margin: 0 auto
+        &_container
+            padding: 100px 0
+
 .section-header
     text-transform: uppercase
     font-size: 30px
     padding: 50px 0
     font-weight: 600
 
-cf-left-game-cont,
-cf-right-game-cont
-    display: inline-block
-    width: 460px
-    padding: 0 100px
-    box-sizing: border-box
-
-cf-ads-block
-    display: block
-    width: 260px
-    height: 400px
-    background-color: rgb(255,100,100)
-
-cf-game-cont
-    position: relative
-    display: inline-block
-
-cf-game-cont > iframe
-    display: block
-
-.cont_with_game
-    text-align: center
-
-    &>cf-left-game-cont,
-
-    &>cf-game-cont,
-
-    &>cf-right-game-cont
-        vertical-align: middle
-
-.footer_ads
-    padding: 100px 0
-
-    & > cf-ads-block
-        width: 720px
-        height: 240px
-        margin: 0 auto
-
-        width: 100%
-
 .news
     font-size: 20px
     &__container
-        width: 720px
+        max-width: 720px
         margin: 0 auto
     &__header
         padding: 30px 0

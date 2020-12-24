@@ -69,7 +69,7 @@
         <div class="tabs">
           <nav class="tabs__links">
             <a id="tab-link_01" class="tabs__link active">Description</a>
-            <a id="tab-link_02" class="tabs__link">Items</a>
+            <a id="tab-link_02" class="tabs__link disabled">Items</a>
             <a id="tab-link_03" class="tabs__link">News log</a>
           </nav>
         </div>
@@ -78,21 +78,18 @@
       <div class="tabs__body">
         <div id="tab_01" class="tabs__block">
           <section class="game__block">
-            <div class="cont_with_game">
-              <cf-left-game-cont>
-                <cf-ads-block></cf-ads-block>
-              </cf-left-game-cont>
-              <cf-game-cont>
-                <div class="overlay">paly</div>
-                <iframe width="700" height="500"></iframe>
-              </cf-game-cont>
-              <cf-right-game-cont>
-                <cf-ads-block></cf-ads-block>
-              </cf-right-game-cont>
+            <div class="ads__left_container ads__side">
+              <div class="ads ads_left"></div>
             </div>
-
-            <div class="footer_ads">
-              <cf-ads-block></cf-ads-block>
+            <div class="game__content">
+              <div class="overlay">Paly</div>
+              <iframe width="1800" height="500"></iframe>
+            </div>
+            <div class="ads__right_container ads__side">
+              <div class="ads ads_right"></div>
+            </div>
+            <div class="ads__bottom_container">
+              <div class="ads ads__bottom"></div>
             </div>
           </section>
           <div class="container">
