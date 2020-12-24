@@ -29,18 +29,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const leftAds = document.querySelector('cf-left-game-cont')
   const rightAds = document.querySelector('cf-right-game-cont')
+  const bottomAds = document.querySelector('.footer_ads > cf-ads-block')
   const game = document.querySelector('cf-game-cont')
 
   const chackSize = () => {
     leftAds.style.display = 'inline-block'
     rightAds.style.display = 'inline-block'
+    bottomAds.style.width = '750px'
 
     let size = leftAds.offsetWidth + rightAds.offsetWidth + game.offsetWidth
     if (size > window.innerWidth) leftAds.style.display = 'none'
     size = rightAds.offsetWidth + game.offsetWidth
-    if (size > window.innerWidth) rightAds.style.display = 'none'
+    if (size > window.innerWidth) {
+      rightAds.style.display = 'none'
+      bottomAds.style.width = '100%'
+    }
   }
 
   chackSize()
-  window.addEventListener("resize",chackSize)
+  window.addEventListener('resize', chackSize)
 })
