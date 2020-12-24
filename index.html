@@ -1,0 +1,176 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>no-copy-ubisoft</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- <link rel="stylesheet" href="./styles/hamburger.css" /> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar__brand">
+        <img class="navbar__brand_logo" src="./images/logo.svg" alt="logotype" />
+      </div>
+      <nav class="navbar__menu">
+        <a class="navbar__menu_link" href="#"><span>Лого</span></a>
+        <a class="navbar__menu_link" href="#"><span>Аркада</span></a>
+        <a class="navbar__menu_link" href="#"><span>Шутер</span></a>
+        <a class="navbar__menu_link" href="#"><span>Пазлы</span></a>
+        <a class="navbar__menu_link" href="#"><span>Профиль</span></a>
+      </nav>
+      <div class="navbar__mobile-menu wrapper">
+        <input type="checkbox" id="check-menu" />
+        <label for="check-menu"></label>
+        <div class="burger-line first"></div>
+        <div class="burger-line second"></div>
+        <div class="burger-line third"></div>
+        <div class="burger-line fourth"></div>
+        <nav class="main-menu">
+          <a href="#"><span>Лого</span></a>
+          <a href="#"><span>Аркада</span></a>
+          <a href="#"><span>Шутер</span></a>
+          <a href="#"><span>Пазлы</span></a>
+          <a href="#"><span>Профиль</span></a>
+        </nav>
+      </div>
+      <!-- <div class="navbar__mobile-menu_wrapper">
+        <input type="checkbox" id="check-menu" />
+        <label for="check-menu"></label>
+        <div class="burger-line first"></div>
+        <div class="burger-line second"></div>
+        <div class="burger-line third"></div>
+        <div class="burger-line fourth"></div>
+        <nav class="navbar__mobile-menu">
+          <a class="navbar_mobile-menu_link" href="#"><span>Лого</span></a>
+          <a class="navbar_mobile-menu_link" href="#"><span>Аркада</span></a>
+          <a class="navbar_mobile-menu_link" href="#"><span>Шутер</span></a>
+          <a class="navbar_mobile-menu_link" href="#"><span>Пазлы</span></a>
+          <a class="navbar_mobile-menu_link" href="#"><span>Профиль</span></a>
+        </nav>
+      </div> -->
+      <div class="navbar__login">
+        <a href="#" class="navbar__login_link">
+          <img class="navbar__login_img" src="images/user.svg" alt="userlogin" />
+          <span>Войти</span>
+        </a>
+      </div>
+    </header>
+    <main>
+      <div class="game__header">
+        <div class="game__header_info">
+          <img class="game__header_img" src="./images/game.png" />
+          <div class="game__header_title">Game Title Name</div>
+        </div>
+        <div class="tabs">
+          <nav class="tabs__links">
+            <a id="tab-link_01" class="tabs__link active">Description</a>
+            <a id="tab-link_02" class="tabs__link">Items</a>
+            <a id="tab-link_03" class="tabs__link">News log</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="tabs__body">
+        <div id="tab_01" class="tabs__block">
+          <section class="game__block">
+            <div class="cont_with_game">
+              <cf-left-game-cont>
+                <cf-ads-block></cf-ads-block>
+              </cf-left-game-cont>
+              <cf-game-cont> <iframe width="700" height="500"></iframe> </cf-game-cont>
+              <cf-right-game-cont>
+                <cf-ads-block></cf-ads-block>
+              </cf-right-game-cont>
+            </div>
+
+            <div class="footer_ads">
+              <cf-ads-block></cf-ads-block>
+            </div>
+          </section>
+          <div class="container">
+            <section class="game__description">
+              <div class="game__description_header section-header">Description</div>
+              <div class="game__description_content">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked
+                up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+                going through the cites of the word in classical literature, discovered the
+                undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de
+                Finibus Bonorum et Malorum" <br />(The Extremes of Good and Evil) by Cicero, written
+                in 45 BC. This book is a treatise on the theory of ethics, very popular during the
+                Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes
+                from a line in section 1.10.32.<br /><br />
+                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
+                Cicero are also reproduced in their exact original form, accompanied by English
+                versions from the 1914 translation by H. Rackham.
+              </div>
+            </section>
+            <section class="game__screenshots">
+              <div class="game__screenshots_header section-header">Screenshots</div>
+              <div class="game__screenshots_content">
+                <img class="screenshot" src="./images/screenshots/screenshot1.jpg" />
+                <img class="screenshot" src="./images/screenshots/screenshot2.jpg" />
+              </div>
+            </section>
+            <section class="game__trailers">
+              <div class="game__trailers_header section-header">Trailers</div>
+              <div class="game__trailers_content">
+                <img class="trailer" src="./images/screenshots/screenshot1.jpg" />
+              </div>
+            </section>
+          </div>
+        </div>
+        <div id="tab_02" class="tabs__block">second</div>
+        <div id="tab_03" class="tabs__block">
+          <div class="news__container">
+            <div class="news">
+              <div class="news__header">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores doloremque nihil
+                facilis officia maxime repellendus.
+              </div>
+              <div class="news__author">By <span class="news__author_name">John Smith</span></div>
+              <div class="news__date">15 June 2020 at 19:10</div>
+              <div class="news__content">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam dolore ut quasi
+                voluptatum eligendi blanditiis sint deserunt nemo vel exercitationem, quam, harum
+                eum aut inventore voluptatibus culpa ea repudiandae?<br /><br />
+                Quos omnis laborum labore. Laudantium eius aut alias corporis enim explicabo, saepe
+                unde sapiente molestiae consequuntur dolor quaerat velit, expedita esse. <br />
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat natus maxime dolore
+                accusamus ipsam magni, a voluptatum magnam ad nostrum quidem officiis cumque omnis
+                quam quos veritatis atque laudantium cum aspernatur architecto adipisci, harum,
+                dignissimos nisi! Unde modi doloremque fuga perspiciatis molestiae consequatur
+                impedit eaque veniam quisquam voluptas! Error, sapiente.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer_nav-menu">
+        <nav class="footer_menu">
+          <a href="#"><span>Лого</span></a>
+          <a href="#"><span>Аркада</span></a>
+          <a href="#"><span>Шутер</span></a>
+          <a href="#"><span>Пазлы</span></a>
+          <a href="#"><span>Профиль</span></a>
+        </nav>
+      </div>
+      <div class="official_info">
+        <span>
+          ©2020 Lorem ipsum dolor, sit amet consectetur <br />
+          adipisicing elit.
+        </span>
+      </div>
+    </footer>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
