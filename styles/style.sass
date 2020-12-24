@@ -9,6 +9,7 @@ main
     // 250px высота футера
 
 .container
+    padding: 0 20px
     max-width: 1190px
     margin: 0 auto
 
@@ -79,12 +80,14 @@ main
                 width: 560px
                 height: 330px
                 object-fit: cover
+                margin-bottom: 30px
     &__trailers
         &_header
         &_content
             .trailer
                 width: 560px
                 height: 330px
+                margin-bottom: 30px
 
 .section-header
     text-transform: uppercase
@@ -152,3 +155,8 @@ cf-game-cont > iframe
         margin-bottom: 30px
     &__content
         text-align: left
+
+@media screen and ( max-width: 800px )
+    .tabs
+        &__link
+            margin: 0

@@ -115,7 +115,7 @@ header {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .navbar__menu {
     display: none;
   }
@@ -162,6 +162,7 @@ main {
 }
 
 .container {
+  padding: 0 20px;
   max-width: 1190px;
   margin: 0 auto;
 }
@@ -240,10 +241,12 @@ main {
   width: 560px;
   height: 330px;
   object-fit: cover;
+  margin-bottom: 30px;
 }
 .game__trailers_content .trailer {
   width: 560px;
   height: 330px;
+  margin-bottom: 30px;
 }
 
 .section-header {
@@ -320,4 +323,10 @@ cf-game-cont > iframe {
 }
 .news__content {
   text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+  .tabs__link {
+    margin: 0;
+  }
 }
