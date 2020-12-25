@@ -49,19 +49,6 @@ header {
   background-color: white;
   color: black;
 }
-.navbar__mobile-menu {
-  display: none;
-}
-.navbar__mobile-menu_wrapper {
-  display: none;
-}
-.navbar__mobile-menu_link {
-  color: white;
-  display: block;
-  width: 100%;
-  padding: 10px;
-  text-decoration: none;
-}
 .navbar__login {
   opacity: 0.5;
   margin-right: 20px;
@@ -82,48 +69,83 @@ header {
   margin: 0 10px;
 }
 
-.login_link {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 20px;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-.login_link .login_icon {
-  width: 30px;
-  height: 30px;
-  margin: 0 10px;
-  align-items: center;
-}
-
-.nav-menu a {
-  font-size: 16cpx;
-  font-weight: 700;
-  margin: 0 60px;
-}
-.nav-menu a:hover {
-  border: 1px solid white;
-  background-color: white;
-  color: black;
-  padding: 20px 20px;
-}
-
-.burger_icon .burger {
-  width: 40px;
-  height: 40px;
+.navbar__mobile {
   display: none;
+}
+.navbar__mobile #check-menu {
+  display: none;
+}
+.navbar__mobile #check-menu:checked ~ .burger-line:first-of-type {
+  display: none;
+}
+.navbar__mobile #check-menu:checked ~ .burger-line:nth-child(odd) {
+  transform: rotate(45deg);
+}
+.navbar__mobile #check-menu:checked ~ .burger-line:nth-child(even) {
+  transform: rotate(-45deg);
+}
+.navbar__mobile #check-menu:checked ~ .burger-line:last-of-type {
+  display: none;
+}
+.navbar__mobile #check-menu:checked ~ nav {
+  max-height: 500px;
+  font-size: 14px;
+}
+.navbar__mobile label {
+  display: block;
+  width: 100vw;
+  height: 50px;
+  cursor: pointer;
+}
+.navbar__mobile .burger-line {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  width: 40px;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.2s all;
+}
+.navbar__mobile .burger-line:first-of-type {
+  top: 15px;
+}
+.navbar__mobile .burger-line:last-of-type {
+  top: 35px;
+}
+.navbar__mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  max-height: 0;
+  font-size: 0;
+  overflow: hidden;
+  transition: 0.5s all;
+  background-color: black;
+}
+.navbar__mobile-menu_link {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 800px) {
-  .navbar__menu {
-    display: none;
+  .navbar__brand_logo {
+    margin-left: 20px;
   }
-  .navbar__mobile-menu {
+  .navbar__menu {
     display: none;
   }
   .navbar__login_link {
     display: none;
+  }
+  .navbar__mobile {
+    display: block;
   }
 }
 footer {

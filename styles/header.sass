@@ -8,39 +8,6 @@ header
     color: white
     z-index: 300
 
-//     .logo
-//     .logoimg
-//         width: 80px
-//         height: 50px
-//     .login_link
-//         display: flex
-//         flex-direction: row
-//         align-items: center
-//         margin-right: 20px
-//         text-transform: uppercase
-//         font-weight: 700
-//         .login_icon
-//             width: 30px
-//             height: 30px
-//             margin: 0 10px
-//             align-items: center
-//     .nav-menu
-//         a
-//             font-size: 16cpx
-//             font-weight: 700
-//             margin: 0 60px
-//         a:hover
-//             border: 1px solid white
-//             background-color: white
-//             color: black
-//             padding: 20px 20px
-
-//     .burger_icon
-//         .burger
-//             width: 40px
-//             height: 40px
-//             display: none
-
 .navbar
     display: flex
     align-items: center
@@ -63,23 +30,6 @@ header
             &:hover
                 background-color: white
                 color: black
-    &__mobile-menu
-        display: none
-        // position: absolute
-        // width: 320px
-        // max-height: 0
-        // font-size: 0
-        // overflow: hidden
-        // transition: 0.5s all
-        // background-color: black
-        &_wrapper
-            display: none
-        &_link
-            color: white
-            display: block
-            width: 100%
-            padding: 10px
-            text-decoration: none
     &__login
         opacity: 0.5
         margin-right: 20px
@@ -95,40 +45,66 @@ header
         &_img
             width: 30px
             margin: 0 10px
-.login_link
-    display: flex
-    flex-direction: row
-    align-items: center
-    margin-right: 20px
-    text-transform: uppercase
-    font-weight: 700
-    .login_icon
-        width: 30px
-        height: 30px
-        margin: 0 10px
-        align-items: center
-.nav-menu
-    a
-        font-size: 16cpx
-        font-weight: 700
-        margin: 0 60px
-    a:hover
-        border: 1px solid white
-        background-color: white
-        color: black
-        padding: 20px 20px
 
-.burger_icon
-    .burger
-        width: 40px
-        height: 40px
+.navbar__mobile
+    display: none
+    #check-menu
         display: none
+        &:checked ~ .burger-line:first-of-type
+            display: none
+        &:checked ~ .burger-line:nth-child(odd)
+            transform: rotate(45deg)
+        &:checked ~ .burger-line:nth-child(even)
+            transform: rotate(-45deg)
+        &:checked ~ .burger-line:last-of-type
+            display: none
+        &:checked ~ nav
+            max-height: 500px
+            font-size: 14px
+    label
+        display: block
+        width: 100vw
+        height: 50px
+        cursor: pointer
+    .burger-line
+        position: absolute
+        top: 25px
+        right: 20px
+        width: 40px
+        height: 2px
+        background-color: #fff
+        transition: 0.2s all
+        &:first-of-type
+            top: 15px
+        &:last-of-type
+            top: 35px
+    &-menu
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        position: absolute
+        left: 0
+        width: 100%
+        max-height: 0
+        font-size: 0
+        overflow: hidden
+        transition: 0.5s all
+        background-color: black
+        &_link
+            display: block
+            text-align: center
+            width: 100%
+            padding: 15px
+            text-decoration: none
+
 @media screen and ( max-width: 800px )
     .navbar
+        &__brand_logo
+            margin-left: 20px
         &__menu
             display: none
-        &__mobile-menu
+        &__login_link
             display: none
-        &__login
-            &_link
-                display: none
+        &__mobile
+            display: block
