@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const leftAds = document.querySelector('.ads__left_container')
   const rightAds = document.querySelector('.ads__right_container')
-  const bottomAds = document.querySelector('.footer_ads')
+  // const bottomAds = document.querySelector('.ads__bottom_container')
   const game = document.querySelector('.game__content')
 
   const chackSize = () => {
@@ -41,10 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     size = rightAds.offsetWidth + game.offsetWidth + 7
     if (size >= document.body.clientWidth) rightAds.style.display = 'none'
-
-    // if (document.body.clientWidth > 720) bottomAds.style.width = document.body.clientWidth
   }
 
   chackSize()
   window.addEventListener('resize', chackSize)
+
+  //==================SCROLL=======================
+  const scroll = document.querySelector('.game__block')
+  scroll.scrollLeft = scroll.scrollWidth / 2 - screen.width / 2
 })

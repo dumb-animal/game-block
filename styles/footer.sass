@@ -1,7 +1,6 @@
 footer
     background-color: #1d1e21
     width: 100%
-    height: 250px
     .footer_nav-menu
         display: flex
         justify-content: center
@@ -10,7 +9,6 @@ footer
         font-weight: 600
         .footer_menu
             display: flex
-            flex-direction: row
             margin-top: 30px
             padding: 30px 0
             a
@@ -22,3 +20,8 @@ footer
         text-align: center
         color: white
         margin-top: 80px
+
+@media screen and ( max-width: 580px )
+    footer
+        .footer_menu
+            flex-direction: column
