@@ -29,18 +29,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const leftAds = document.querySelector('.ads__left_container')
   const rightAds = document.querySelector('.ads__right_container')
-  // const bottomAds = document.querySelector('.ads__bottom_container')
+  const bottomAds = document.querySelector('.ads__bottom_container')
   const game = document.querySelector('.game__content')
+  const gameBlock = document.querySelector('.game__block')
 
   const chackSize = () => {
     leftAds.style.display = 'inline-block'
     rightAds.style.display = 'inline-block'
+    bottomAds.style.width = '720px'
 
     let size = leftAds.clientWidth + rightAds.clientWidth + game.clientWidth + 7
     if (size >= document.body.clientWidth) leftAds.style.display = 'none'
 
     size = rightAds.offsetWidth + game.offsetWidth + 7
     if (size >= document.body.clientWidth) rightAds.style.display = 'none'
+
+    if (document.body.clientWidth < 720) bottomAds.style.width = gameBlock.scrollWidth
   }
 
   chackSize()
